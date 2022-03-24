@@ -43,3 +43,33 @@ void fill_array(int a[], int size, int& number_used)
     }
     number_used = index;
 }
+
+double compute_average(const int a[], int number_used)
+{
+    double total = 0;
+    for (int index = 0; index < number_used; index++)
+        total = total + a[index];
+    if(number_used > 0)
+    {
+        return (total/number_used);
+    }
+    else
+    {
+        using namespace std;
+        cout << "ERROR: number of elements is 0 in compute_average.\n"
+             << "compute_avere returns 0.\n";
+        return 0;
+    }
+}
+
+void show_difference(const int a[], int number_used)
+{
+    using namespace std;
+    double average = compute_average(a, number_used);
+    cout << "Average of the " << number_used
+         << " scores = " << average << endl
+         << "The scores are: \n";
+    for(int index = 0; index < number_used; index++)
+    cout << a[index] << " differs from average by "
+         << (a[index] - average) << endl;
+}
