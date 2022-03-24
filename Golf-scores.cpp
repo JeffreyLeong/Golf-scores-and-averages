@@ -57,7 +57,7 @@ double compute_average(const int a[], int number_used)
     {
         using namespace std;
         cout << "ERROR: number of elements is 0 in compute_average.\n"
-             << "compute_avere returns 0.\n";
+             << "compute_average returns 0.\n";
         return 0;
     }
 }
